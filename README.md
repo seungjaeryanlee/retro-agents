@@ -16,5 +16,8 @@
    - Score: 3849.35
    - Task Scores: 7414.56, 2917.43, 3484.82, 2695.24, 2734.69
 6. [6_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/6_rainbow.py)
+   - Score: 2447.30
+   - Task Scores: 5149.68, 2255.74, 1437.19, 1979.20, 1414.68
+6. [7_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/7_rainbow.py)
    - Score: TBD
    - Task Scores: TBD

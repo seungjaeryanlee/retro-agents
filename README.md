@@ -10,5 +10,8 @@
    * Score: 1358.18
    * Task Scores: 769.13, 1232.46, 2400.22, 1729.80, 659.30
 4. [rainbow_agent.py](https://github.com/openai/retro-baselines/blob/master/agents/rainbow_agent.py)
-   * Score: TBD
-   * Task Scores: TBD
+   * Score: 1349.99
+   * Task Scores: 747.69, 1196.37, 2380.21, 1771.47, 654.21
+5. [5_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/5_rainbow.py)
+   - Score: TBD
+   - Task Scores: TBD

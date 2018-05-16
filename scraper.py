@@ -78,14 +78,14 @@ def info_to_log(info):
     """
     Formats info to a single-line string to save.
     """
-    log = '{:30} | {:20} | {:>7} | {:>7}'.format(
+    log = '{:30} | {:20} | {:10} | {:>7}'.format(
         str(datetime.now()),
         info['summary']['docker_name'],
         info['summary']['status'],
         info['summary']['score'],
     )
     for i in range(5):
-        log += ' | {:2} | {:7} | {:5} | {:>7}'.format(
+        log += ' | {:2} | {:10} | {:5} | {:>7}'.format(
             info['tasks'][i]['task'],
             info['tasks'][i]['status'],
             info['tasks'][i]['progress'],

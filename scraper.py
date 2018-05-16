@@ -113,4 +113,8 @@ def auto_log(interval_in_sec):
         time.sleep(interval_in_sec)
 
 if __name__ == '__main__':
-    auto_log(300)
+    session, remember_token = get_cookies()
+    page = get_page(session, remember_token)
+    info = page_to_info(page)
+    log = info_to_log(info)
+    save_log(log)

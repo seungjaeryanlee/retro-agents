@@ -1,3 +1,5 @@
 Name,Score,num_images,min_val,max_val,player,learning_rate,replay_buffer,replay_buffer capacity,replay_buffer alpha,replay_buffer beta,replay_buffer first_max,replay_buffer epsilon,train_interval,target_interval,batch_size,min_buffer_size
 baseline,1358.18,4,-200,200,NstepPlayer(BatchedPlayer),0.0001,PrioritizedReplayBuffer,500000,0.5,0.4,1,0.1,1,8192,32,20000
-v5,,4,-200,200,NstepPlayer(BatchedPlayer),0.001,PrioritizedReplayBuffer,500000,0.5,0.4,1,0.1,1,8192,32,20000
+v5,3849.35,4,-200,200,NstepPlayer(BatchedPlayer),0.001,PrioritizedReplayBuffer,500000,0.5,0.4,1,0.1,1,8192,32,20000
+v6,,4,-200,200,NstepPlayer(BatchedPlayer),0.01,PrioritizedReplayBuffer,500000,0.5,0.4,1,0.1,1,8192,32,20000
+v7,,4,-200,200,NstepPlayer(BatchedPlayer),0.001,PrioritizedReplayBuffer,500000,0.7,0.4,1,0.1,1,8192,32,20000

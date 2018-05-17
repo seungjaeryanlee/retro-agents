@@ -41,3 +41,13 @@
    - Score: TBD
    - Task Scores: TBD
    - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=4, sigma0: 0.1
+
+# Idea Bank
+ - Vary learning rate or epsilon by time
+ - Try different [Adam learning rate / epsilon](https://github.com/unixpickle/anyrl-py/blob/531dd920e77f1b77d63d52bd56aad0807bfdccd8/anyrl/algos/dqn.py)
+ - Read [Rainbow paper](https://arxiv.org/pdf/1710.02298.pdf)
+   - Increase replay memory buffer size (20K -> 80K to follow paper)
+   - Increase beta over time (to follow paper)
+   - Change NStepPlayer step size (known to be sensitive)
+   - With noisynet, set epsilon = 0
+   - Without noisynet, Decrease epsilon over time (1 -> 0)

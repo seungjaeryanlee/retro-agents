@@ -34,8 +34,8 @@
    - Task Scores: 7205.39, 2920.50, 2406.80, 1832.62, 2616.69
    - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=5
 10. [10_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/10_rainbow.py)
-   - Score: TBD
-   - Task Scores: TBD
+   - Score: 3470.62
+   - Task Scores: 7448.09, 2597.23, 2659.62, 2192.36, 2455.79
    - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=3
 11. [11_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/11_rainbow.py)
    - Score: TBD

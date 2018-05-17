@@ -40,7 +40,11 @@
 11. [11_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/11_rainbow.py)
    - Score: TBD
    - Task Scores: TBD
-   - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=4, sigma0: 0.1
+   - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1
+12. [12_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/12_rainbow.py)
+   - Score: TBD
+   - Task Scores: TBD
+   - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: ?, epsilon = 0
 
 # Idea Bank
  - Vary learning rate or epsilon by time

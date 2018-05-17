@@ -37,3 +37,7 @@
    - Score: TBD
    - Task Scores: TBD
    - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=3
+11. [11_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/11_rainbow.py)
+   - Score: TBD
+   - Task Scores: TBD
+   - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=4, sigma0: 0.1

@@ -37,10 +37,16 @@ def page_to_info(page):
     job_div_dds = job_div.find('dl').find_all('dd')
 
     status = job_div_dds[0].contents[0].strip()
-    docker_name = job_div_dds[1].contents[0].strip()
-    start_time = job_div_dds[2].contents[0].strip()
-    eta = job_div_dds[3].contents[0].strip()
-    score = job_div_dds[4].contents[0].strip()
+    if status == 'finished':
+        docker_name = job_div_dds[1].contents[0].strip()
+        start_time = job_div_dds[2].contents[0].strip()
+        eta = ''
+        score = job_div_dds[3].contents[0].strip()
+    else:
+        docker_name = job_div_dds[1].contents[0].strip()
+        start_time = job_div_dds[2].contents[0].strip()
+        eta = job_div_dds[3].contents[0].strip()
+        score = job_div_dds[4].contents[0].strip()
 
     info['summary'] = {}
     info['summary']['status'] = status

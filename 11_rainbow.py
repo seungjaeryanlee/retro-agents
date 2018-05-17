@@ -29,7 +29,7 @@ def main():
                                   gym_space_vectorizer(env.observation_space),
                                   min_val=-200,
                                   max_val=200,
-                                  sigma=0.1))
+                                  sigma0=0.1))
         player = NStepPlayer(BatchedPlayer(env, dqn.online_net), 3)
         optimize = dqn.optimize(learning_rate=1e-3)
         sess.run(tf.global_variables_initializer())

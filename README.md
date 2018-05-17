@@ -51,3 +51,18 @@
    - Change NStepPlayer step size (known to be sensitive)
    - With noisynet, set epsilon = 0
    - Without noisynet, Decrease epsilon over time (1 -> 0)
+
+# Checked Ideas
+**Bold** for best result, *Italics* for initial value.
+ - Change Adam Learning Rate
+   - 1e-2, **1e-3**, *1e-4*
+ - Change Priority Exponent
+   - *0.5*, **0.7**, 0.8
+ - Change Number of Images
+   - 3, **4**, 5
+ - Change initial Noisy Net noise (sigma0)
+   - 0.1, *0.5*
+ - Decrease Exploration Epsilon in PrioritizedReplayBuffer to 0
+   - 0, *0.1*
+ - Change NStepPlayer step size
+   - 1, *3*, 5

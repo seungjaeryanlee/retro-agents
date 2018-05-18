@@ -106,7 +106,7 @@ class CustomFloatBuffer:
 
 class CustomPrioritizedReplayBuffer(PrioritizedReplayBuffer):
     def __init__(self, capacity, alpha, beta, first_max=1, epsilon=0):
-        super().__init__(self, capacity, alpha, beta, first_max, epsilon)
+        super().__init__(capacity, alpha, beta, first_max, epsilon)
         self.errors = CustomFloatBuffer(capacity)
 
 def main():

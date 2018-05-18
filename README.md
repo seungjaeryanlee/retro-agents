@@ -53,7 +53,18 @@
     - Score: TBD
     - Task Scores: TBD
     - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 1e-5
-    - CustomFloatBuffer, CustomPrioritizedReplayBuffer to disable assertion
+15. [15_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/15_rainbow.py)
+    - Score: TBD
+    - Task Scores: TBD
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = ? NStep: 5
+16. [16_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/16_rainbow.py)
+    - Score: TBD
+    - Task Scores: TBD
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = ? NStep: 1
+17. [17_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/17_rainbow.py)
+    - Score: TBD
+    - Task Scores: TBD
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = ? NStep: ? adam_epsilon: ?
 
 # Idea Bank
  - Vary learning rate or epsilon by time

@@ -44,11 +44,6 @@
 12. [12_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/12_rainbow.py)
     - error due to assertion (value > 0) in FloatBuffer: value = (weights + epsilon) ** ?
     - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 0
-13. [13_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/13_rainbow.py)
-    - Score: TBD
-    - Task Scores: TBD
-    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 0
-    - CustomFloatBuffer, CustomPrioritizedReplayBuffer to disable assertion
 14. [14_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/14_rainbow.py)
     - Score: TBD
     - Task Scores: TBD
@@ -87,6 +82,6 @@
  - Change initial Noisy Net noise (sigma0)
    - 0.1, *0.5*
  - Decrease Exploration Epsilon in PrioritizedReplayBuffer to 0
-   - 0, 1e-5, *1e-1*
+   - 1e-5, *1e-1*
  - Change NStepPlayer step size
    - 1, *3*, 5

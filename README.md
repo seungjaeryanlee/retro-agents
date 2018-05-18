@@ -34,23 +34,23 @@
    - Task Scores: 7205.39, 2920.50, 2406.80, 1832.62, 2616.69
    - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=5
 10. [10_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/10_rainbow.py)
-   - Score: 3470.62
-   - Task Scores: 7448.09, 2597.23, 2659.62, 2192.36, 2455.79
-   - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=3
+    - Score: 3470.62
+    - Task Scores: 7448.09, 2597.23, 2659.62, 2192.36, 2455.79
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, num_images=3
 11. [11_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/11_rainbow.py)
-   - Score: TBD
-   - Task Scores: TBD
-   - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1
+    - Score: 3529.88
+    - Task Scores: 6959.38, 3106.55, 1693.94, 4267.29, 1622.26
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1
 12. [12_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/12_rainbow.py)
-   - Score: N/A
-   - Task Scores: N/A
-   - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 0
-   - error due to assertion (value > 0) in FloatBuffer: value = (weights + epsilon) ** ?
+    - Score: N/A
+    - Task Scores: N/A
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 0
+    - error due to assertion (value > 0) in FloatBuffer: value = (weights + epsilon) ** ?
 13. [13_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/12_rainbow.py)
-   - Score: TBD
-   - Task Scores: TBD
-   - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 0
-   - CustomFloatBuffer, CustomPrioritizedReplayBuffer to disable assertion
+    - Score: TBD
+    - Task Scores: TBD
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 0
+    - CustomFloatBuffer, CustomPrioritizedReplayBuffer to disable assertion
 
 # Idea Bank
  - Vary learning rate or epsilon by time

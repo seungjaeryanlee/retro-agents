@@ -45,21 +45,21 @@
     - error due to assertion (value > 0) in FloatBuffer: value = (weights + epsilon) ** ?
     - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 0
 14. [14_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/14_rainbow.py)
-    - Score: TBD
-    - Task Scores: TBD
+    - Score: 3657.89
+    - Task Scores: 7317.67, 2453.19, 2003.89, 4310.35, 2204.33
     - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = 1e-5
 15. [15_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/15_rainbow.py)
     - Score: TBD
     - Task Scores: TBD
-    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = ? NStep: 5
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, NStep: 5
 16. [16_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/16_rainbow.py)
     - Score: TBD
     - Task Scores: TBD
-    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = ? NStep: 1
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, NStep: 1
 17. [17_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/17_rainbow.py)
     - Score: TBD
     - Task Scores: TBD
-    - learning_rate=1e-3, replay_buffer_alpha=0.7, sigma0: 0.1, epsilon = ? NStep: ? adam_epsilon: ?
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, NStep: ? adam_epsilon: ?
 
 # Idea Bank
  - Vary learning rate or epsilon by time

@@ -39,6 +39,7 @@ class CLRDQN(DQN):
               num_steps,
               player,
               replay_buffer,
+              clr_type=1,
               train_interval=1,
               target_interval=8192,
               batch_size=32,
@@ -88,7 +89,10 @@ class CLRDQN(DQN):
                 for sched in tf_schedules:
                     sched.add_time(sess, 1)
                 if replay_buffer.size >= min_buffer_size and steps_taken >= next_train_step:
-                    assign_op = self.learning_rate_var.assign(self.get_clr(steps_taken))
+                    if clr_type == 1:
+                        assign_op = self.learning_rate_var.assign(self.get_clr(steps_taken))
+                    elif clr_type == 2:
+                        assign_op = self.learning_rate_var.assign(self.get_clr2(steps_taken))
                     sess.run(assign_op)
                     next_train_step = steps_taken + train_interval
                     batch = replay_buffer.sample(batch_size)

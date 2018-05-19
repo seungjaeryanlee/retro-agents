@@ -15,8 +15,8 @@ import gym_remote.exceptions as gre
 from math import sqrt
 
 EXPLOIT_BIAS = 0.25
-NUM_STEPS = 100
-BACKTRACK_NUM_STEPS = 70
+NUM_STEPS = 400
+BACKTRACK_NUM_STEPS = 140
 TOTAL_TIMESTEPS = int(1e6)
 
 def main():
@@ -26,10 +26,10 @@ def main():
     env = TrackedEnv(env)
     new_ep = True
     solutions = []
+
     while True:
         if new_ep:
-            if (solutions and
-                    random.random() < EXPLOIT_BIAS + sqrt(env.total_steps_ever / TOTAL_TIMESTEPS**2)):
+            if (solutions and random.random() < EXPLOIT_BIAS + env.total_steps_ever / TOTAL_TIMESTEPS**2):
                 solutions = sorted(solutions, key=lambda x: np.mean(x[0]))
                 best_pair = solutions[-1]
                 new_rew = exploit(env, best_pair[1])
@@ -39,7 +39,9 @@ def main():
             else:
                 env.reset()
                 new_ep = False
+
         rew, new_ep = move(env, NUM_STEPS)
+
         if not new_ep and rew <= 0:
             print('backtracking due to negative reward: %f' % rew)
             _, new_ep = move(env, BACKTRACK_NUM_STEPS, left=True)

@@ -61,6 +61,13 @@
     - Task Scores: TBD
     - learning_rate=1e-3, replay_buffer_alpha=0.7, NStep: ? adam_epsilon: ?
 
+ - clr_rainbow_1.py
+    - Use get_clr()
+    - ETA keeps increasing
+ - clr_rainbow_2.py
+    - Use get_clr2()
+    - ETA keeps increasing
+
 # Idea Bank
  - Vary learning rate or epsilon by time
  - Try different [Adam learning rate / epsilon](https://github.com/unixpickle/anyrl-py/blob/531dd920e77f1b77d63d52bd56aad0807bfdccd8/anyrl/algos/dqn.py)

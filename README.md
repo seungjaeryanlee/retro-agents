@@ -62,11 +62,13 @@
     - learning_rate=1e-3, replay_buffer_alpha=0.7, NStep: ? adam_epsilon: ?
 
  - clr_rainbow_1.py
-    - Use get_clr()
+    - Use get_clr(), step_size=20000, N_step=5, alpha=0.7
     - ETA keeps increasing
  - clr_rainbow_2.py
-    - Use get_clr2()
+    - Use get_clr2(), step_size=20000, N_step=5, alpha=0.7
     - ETA keeps increasing
+ - clr_rainbow_3.py
+    - get_clr2(), step_size=1000, N_step=3, alpha=0.7
 
 # Idea Bank
  - Vary learning rate or epsilon by time

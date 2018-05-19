@@ -59,14 +59,16 @@
 17. [17_rainbow.py](https://github.com/seungjaeryanlee/retro-agents/blob/master/17_rainbow.py)
     - Score: TBD
     - Task Scores: TBD
-    - learning_rate=1e-3, replay_buffer_alpha=0.7, NStep: ? adam_epsilon: ?
+    - learning_rate=1e-3, replay_buffer_alpha=0.7, NStep: 3, epsilon=0
 
  - clr_rainbow_1.py
-    - Use get_clr()
+    - Use get_clr(), step_size=20000, N_step=5, alpha=0.7
     - ETA keeps increasing
  - clr_rainbow_2.py
-    - Use get_clr2()
+    - Use get_clr2(), step_size=20000, N_step=5, alpha=0.7
     - ETA keeps increasing
+ - clr_rainbow_3.py
+    - get_clr2(), step_size=1000, N_step=3, alpha=0.7
 
 # Idea Bank
  - Vary learning rate or epsilon by time

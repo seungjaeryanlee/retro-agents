@@ -5,7 +5,7 @@ import tensorflow as tf
 from anyrl.algos import DQN
 
 class CLRDQN(DQN):
-    def get_clr(self, iterations, step_size=20000, base_lr = 1e-5, max_lr = 1e-4):
+    def get_clr(self, iterations, step_size=1000, base_lr = 1e-5, max_lr = 1e-4):
         """
         Cyclical learning Rate (Triangular)
         From https://github.com/bckenstler/CLR
@@ -14,7 +14,7 @@ class CLRDQN(DQN):
         x = np.abs(iterations / step_size - 2*cycle + 1)
         return base_lr + (max_lr - base_lr) * np.maximum(0, (1-x))
 
-    def get_clr2(self, iterations, step_size=20000, base_lr = 1e-5, max_lr = 1e-4):
+    def get_clr2(self, iterations, step_size=1000, base_lr = 1e-5, max_lr = 1e-4):
         """
         Cyclical learning Rate (Triangular 2)
         From https://github.com/bckenstler/CLR

@@ -28,3 +28,6 @@
    * (No Growth)
    * **Linear Growth**
    * Squared Exploit Growth
+
+## Ideas
+ * Increase NUM_STEPS over time

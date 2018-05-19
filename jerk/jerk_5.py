@@ -29,7 +29,7 @@ def main():
 
     while True:
         if new_ep:
-            if (solutions and random.random() < EXPLOIT_BIAS + env.total_steps_ever / TOTAL_TIMESTEPS**2):
+            if (solutions and random.random() < EXPLOIT_BIAS + env.total_steps_ever / TOTAL_TIMESTEPS):
                 solutions = sorted(solutions, key=lambda x: np.mean(x[0]))
                 best_pair = solutions[-1]
                 new_rew = exploit(env, best_pair[1])

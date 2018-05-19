@@ -8,9 +8,12 @@
  * Version 2
    * Score: 3964.28 (6528.07, 2520.57, 5120.44, 2550.38, 3101.96)
    * EXPLOIT_BIAS=0.5
- * Version 2
+ * Version 3
    * Score: TBD
    * EXPLOIT_BIAS=0.125
+ * Version 4
+   * Score: TBD
+   * Squared Exploit Growth
 
 ## Hyperparameter Tuning
 
@@ -18,3 +21,7 @@
    * (0.125)
    * **0.25**
    * 0.5
+ * EXPLOIT GROWTH
+   * (No Growth)
+   * Linear Growth
+   * (Squared Exploit Growth)

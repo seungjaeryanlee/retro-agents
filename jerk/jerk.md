@@ -6,3 +6,6 @@
  * Version 2
    * Score: TBD
    * EXPLOIT_BIAS=0.5
+ * Version 2
+   * Score: TBD
+   * EXPLOIT_BIAS=0.125

@@ -8,11 +8,10 @@
     * Score: TBD
     * Learning rate: 1e-4 -> 1e-3
     * Alpha: 0.5 -> 0.7
- * Version 1
+ * Error Threshold (v1)
     * Score: TBD
-    * Error Threshold
- * Version 2
+ * Error Threshold with Exponential Decay
     * Score: TBD
-    * Error Threshold with Exponential Decay
+    * 
 
 ## Ideas

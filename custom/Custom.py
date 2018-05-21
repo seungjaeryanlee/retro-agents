@@ -34,7 +34,7 @@ class CachePrioritizedReplayBuffer(PrioritizedReplayBuffer):
           epsilon: a value which is added to every error
             term before the error term is used.
         """
-        super.__init__(capacity, alpha, beta, first_max, epsilon)
+        super().__init__(capacity, alpha, beta, first_max, epsilon)
 
         self.error_threshold = 0 # Threshold error for newly added sample
 
@@ -93,7 +93,7 @@ class CachePrioritizedReplayBuffer2(PrioritizedReplayBuffer):
           epsilon: a value which is added to every error
             term before the error term is used.
         """
-        super.__init__(capacity, alpha, beta, first_max, epsilon)
+        super().__init__(capacity, alpha, beta, first_max, epsilon)
 
         self.error_threshold = 0              # Threshold error for newly added sample
         self.error_threshold_decay_rate = 0.9 # Threshold decay after rejecting sample

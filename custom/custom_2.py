@@ -31,11 +31,11 @@ def main():
                                   min_val=-200,
                                   max_val=200))
         player = NStepPlayer(BatchedPlayer(env, dqn.online_net), 3)
-        optimize = dqn.optimize(learning_rate=1e-4)
+        optimize = dqn.optimize(learning_rate=1e-3)
         sess.run(tf.global_variables_initializer())
         dqn.train(num_steps=2000000, # Make sure an exception arrives before we stop.
                   player=player,
-                  replay_buffer=CachePrioritizedReplayBuffer2(500000, 0.5, 0.4, epsilon=0.1),
+                  replay_buffer=CachePrioritizedReplayBuffer2(500000, 0.7, 0.4, epsilon=0.1),
                   optimize_op=optimize,
                   train_interval=1,
                   target_interval=8192,

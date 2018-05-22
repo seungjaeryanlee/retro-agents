@@ -5,7 +5,7 @@
  * Baseline
     * Score: 1358.18 (769.13, 1232.46, 2400.22, 1729.80, 659.30)
  * Uniform Experience Replay (v3)
-    * Score: TBD
+    * Score: TBD (7566.88, 2977.46, 3324.90, TBD, TBD)
     * Learning rate: 1e-4 -> 1e-3
     * Alpha: 0.5 -> 0.7
  * Tuned Baseline (v16)
@@ -13,11 +13,11 @@
     * Learning rate: 1e-4 -> 1e-3
     * Alpha: 0.5 -> 0.7
  * "Tuned" Moving Average Error Threshold (v1)
-    * Score: TBD
+    * Score: 3710.31 (7595.58, 2715.25, 2872.21, 2343.48, 3025.02)
     * Learning rate: 1e-4 -> 1e-3
     * Alpha: 0.5 -> 0.7
  * "Tuned" Moving Average Error Threshold with Exponential Decay (v2)
-    * Score: TBD
+    * Score: 3769.19 (7466.05, 3203.78, 2952.01, 2209.81, 3014.29)
     * Learning rate: 1e-4 -> 1e-3
     * Alpha: 0.5 -> 0.7
  * "Tuned" Moving Average Error Threshold with Exponential Decay and Reset

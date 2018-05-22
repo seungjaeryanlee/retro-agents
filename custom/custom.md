@@ -20,6 +20,10 @@
     * Score: 3769.19 (7466.05, 3203.78, 2952.01, 2209.81, 3014.29)
     * Learning rate: 1e-4 -> 1e-3
     * Alpha: 0.5 -> 0.7
+ * "Tuned" Minimum Error Threshold (v4)
+    * Score: TBD
+    * Learning rate: 1e-4 -> 1e-3
+    * Alpha: 0.5 -> 0.7
  * "Tuned" Moving Average Error Threshold with Exponential Decay and Reset
     * Score: TBD
     * Learning rate: 1e-4 -> 1e-3

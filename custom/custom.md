@@ -5,7 +5,7 @@
  * Baseline
     * Score: 1358.18 (769.13, 1232.46, 2400.22, 1729.80, 659.30)
  * Uniform Experience Replay (v3)
-    * Score: TBD (7566.88, 2977.46, 3324.90, TBD, TBD)
+    * Score: 3848.98 (7566.88, 2977.46, 3324.90, 1993.85, 3391.80)
     * Learning rate: 1e-4 -> 1e-3
     * Alpha: 0.5 -> 0.7
  * Tuned Baseline (v16)

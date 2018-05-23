@@ -1,6 +1,9 @@
 # Docker credentials
 docker_credentials.txt
 
+# Model
+local/model
+
 # Login information for scraping website
 cookies.txt
 

@@ -1,2 +1,0 @@
-model_checkpoint_path: "rainbow.ckpt"
-all_model_checkpoint_paths: "rainbow.ckpt"

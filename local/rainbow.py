@@ -41,7 +41,7 @@ def load_train_save(game, state):
         player = NStepPlayer(BatchedPlayer(env, dqn.online_net), 3)
         optimize = dqn.optimize(learning_rate=1e-3)
         sess.run(tf.global_variables_initializer())
-        dqn.train(num_steps=1000, # Make sure an exception arrives before we stop.
+        dqn.train(num_steps=100000, # Make sure an exception arrives before we stop.
                   player=player,
                   replay_buffer=PrioritizedReplayBuffer(500000, 0.7, 0.4, epsilon=0.1),
                   optimize_op=optimize,
@@ -49,7 +49,7 @@ def load_train_save(game, state):
                   target_interval=8192,
                   batch_size=32,
                   min_buffer_size=20000)
-
+        # 10K steps: 45s
         dqn.save()
 
 def main():

@@ -15,10 +15,12 @@
  * "Tuned" Minimum Error Threshold (v4)
     * Score: 3808.20 (7711.53, 3195.36, 3362.40, 2098.70, 2672.99)
  * "Tuned" Minimum Error Threshold with smaller cache (v5)
-    * Score: TBD
+    * Score: 3359.75 (7472.50, 2290.54, 1788.44, 2342.33, 2904.95)
     * capacity: 500000 -> 125000
     * min_buffer: 20000 -> 10000
- * "Tuned" Minimum Error Threshold when Full (v6)
+ * "Tuned" All Average Threshold (v6)
+    * Score: TBD
+ * "Tuned" Minimum Error Threshold when Full
     * Score: TBD
 
 

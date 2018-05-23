@@ -19,7 +19,7 @@
     * capacity: 500000 -> 125000
     * min_buffer: 20000 -> 10000
  * "Tuned" All Average Threshold (v6)
-    * Score: TBD
+    * Score: 3969.89 (7236.84, 3350.97, 3237.88, 2732.87, 3290.87)
  * "Tuned" Stochastic Maximum Threshold (v7)
     * Score: TBD
  * "Tuned" Full-Buffer Minimum Error Threshold

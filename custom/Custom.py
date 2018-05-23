@@ -201,7 +201,7 @@ class StochasticMaxPRB(PrioritizedReplayBuffer):
         else:
             new_error = self._process_weight(init_weight)
 
-            if new_error >= self.max_error:
+            if new_error < self.max_error:
                 if random.random() < new_error / self.max_error: # Stochastic
                     self.transitions.append(sample)
                     self.errors.append(new_error)

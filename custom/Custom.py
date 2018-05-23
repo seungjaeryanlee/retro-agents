@@ -4,7 +4,7 @@ import random
 from anyrl.rollouts import PrioritizedReplayBuffer
 
 
-class CachePrioritizedReplayBuffer(PrioritizedReplayBuffer):
+class BufferAveragePRB(PrioritizedReplayBuffer):
     """
     A prioritized replay buffer with Buffer Average Threshold caching and
     loss-proportional sampling.
@@ -40,7 +40,7 @@ class CachePrioritizedReplayBuffer(PrioritizedReplayBuffer):
             del self.transitions[0]
 
 
-class CachePrioritizedReplayBuffer2(PrioritizedReplayBuffer):
+class DecayingBufferAveragePRB(PrioritizedReplayBuffer):
     """
     A prioritized replay buffer with Decaying Buffer Average Threshold caching
     and loss-proportional sampling.
@@ -77,7 +77,7 @@ class CachePrioritizedReplayBuffer2(PrioritizedReplayBuffer):
             del self.transitions[0]
 
 
-class ThresholdPrioritizedReplayBuffer3(PrioritizedReplayBuffer):
+class MinimumPRB(PrioritizedReplayBuffer):
     """
     A prioritized replay buffer with Minimum Threshold caching and
     loss-proportional sampling.
@@ -105,7 +105,7 @@ class ThresholdPrioritizedReplayBuffer3(PrioritizedReplayBuffer):
             del self.transitions[0]
 
 
-class ThresholdPrioritizedReplayBuffer4(PrioritizedReplayBuffer):
+class FullBufferMinimumPRB(PrioritizedReplayBuffer):
     """
     A prioritized replay buffer with Full-buffer Minimum Threshold caching and
     loss-proportional sampling.
@@ -133,7 +133,7 @@ class ThresholdPrioritizedReplayBuffer4(PrioritizedReplayBuffer):
             del self.transitions[0]
 
 
-class AllAveragePrioritizedReplayBuffer(PrioritizedReplayBuffer):
+class AllAveragePRB(PrioritizedReplayBuffer):
     """
     A prioritized replay buffer with All Average Threshold caching and
     loss-proportional sampling.
@@ -173,7 +173,7 @@ class AllAveragePrioritizedReplayBuffer(PrioritizedReplayBuffer):
             del self.transitions[0]
 
 
-class StochasticMaxPrioritizedReplayBuffer(PrioritizedReplayBuffer):
+class StochasticMaxPRB(PrioritizedReplayBuffer):
     """
     A prioritized replay buffer with Stochastic Maximum Threshold caching and
     loss-proportional sampling.

@@ -16,7 +16,7 @@ import gym_remote.exceptions as gre
 
 from sonic_util import AllowBacktracking, make_env
 
-from Custom import AllAveragePrioritizedReplayBuffer
+from Custom import AllAveragePRB
 
 def main():
     """Run DQN until the environment throws an exception."""
@@ -35,7 +35,7 @@ def main():
         sess.run(tf.global_variables_initializer())
         dqn.train(num_steps=2000000, # Make sure an exception arrives before we stop.
                   player=player,
-                  replay_buffer=AllAveragePrioritizedReplayBuffer(500000, 0.7, 0.4, epsilon=0.1),
+                  replay_buffer=AllAveragePRB(500000, 0.7, 0.4, epsilon=0.1),
                   optimize_op=optimize,
                   train_interval=1,
                   target_interval=8192,

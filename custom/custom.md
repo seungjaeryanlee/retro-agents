@@ -8,9 +8,9 @@
     * Score: 3919.81 (7567.57, 3209.94, 3528.58, 2110.28, 3182.64)
  * "Tuned" Uniform Experience Replay (v3)
     * Score: 3848.98 (7566.88, 2977.46, 3324.90, 1993.85, 3391.80)
- * "Tuned" Moving Average Error Threshold (v1)
+ * "Tuned" Buffer Average Threshold (v1)
     * Score: 3710.31 (7595.58, 2715.25, 2872.21, 2343.48, 3025.02)
- * "Tuned" Moving Average Error Threshold with Exponential Decay (v2)
+ * "Tuned" Decaying Buffer Average Threshold (v2)
     * Score: 3769.19 (7466.05, 3203.78, 2952.01, 2209.81, 3014.29)
  * "Tuned" Minimum Error Threshold (v4)
     * Score: 3808.20 (7711.53, 3195.36, 3362.40, 2098.70, 2672.99)
@@ -20,7 +20,9 @@
     * min_buffer: 20000 -> 10000
  * "Tuned" All Average Threshold (v6)
     * Score: TBD
- * "Tuned" Minimum Error Threshold when Full
+ * "Tuned" Stochastic Maximum Threshold (v7)
+    * Score: TBD
+ * "Tuned" Full-Buffer Minimum Error Threshold
     * Score: TBD
 
 

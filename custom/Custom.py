@@ -205,6 +205,10 @@ class StochasticMaxPRB(PrioritizedReplayBuffer):
                 if random.random() < new_error / self.max_error: # Stochastic
                     self.transitions.append(sample)
                     self.errors.append(new_error)
+            else:
+                self.max_error = new_error
+                self.transitions.append(sample)
+                self.errors.append(new_error)
 
         while len(self.transitions) > self.capacity:
             # TODO Any way to update max here?

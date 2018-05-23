@@ -154,3 +154,34 @@ class ThresholdPrioritizedReplayBuffer3(PrioritizedReplayBuffer):
 
         while len(self.transitions) > self.capacity:
             del self.transitions[0]
+
+class ThresholdPrioritizedReplayBuffer4(PrioritizedReplayBuffer):
+    """
+    A prioritized replay buffer with loss-proportional
+    sampling.
+    Weights passed to add_sample() and update_weights()
+    are assumed to be error terms (e.g. the absolute TD
+    error).
+    """
+
+    def add_sample(self, sample, init_weight=None):
+        """
+        Add a sample to the buffer.
+        When new samples are added without an explicit
+        initial weight, the maximum weight argument ever
+        seen is used. When the buffer is empty, first_max
+        is used.
+        """
+        if init_weight is None:
+            self.transitions.append(sample)
+            self.errors.append(self._process_weight(self._max_weight_arg))
+        else:
+            new_error = self._process_weight(init_weight)
+            if new_error < self.errors.min() and len(self.transitions) >= self.capacity:
+                return
+
+            self.transitions.append(sample)
+            self.errors.append(new_error)
+
+        while len(self.transitions) > self.capacity:
+            del self.transitions[0]

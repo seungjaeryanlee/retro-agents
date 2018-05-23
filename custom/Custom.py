@@ -207,4 +207,5 @@ class StochasticMaxPRB(PrioritizedReplayBuffer):
                     self.errors.append(new_error)
 
         while len(self.transitions) > self.capacity:
+            # TODO Any way to update max here?
             del self.transitions[0]

@@ -21,7 +21,7 @@
  * "Tuned" All Average Threshold (v6)
     * Score: 3969.89 (7236.84, 3350.97, 3237.88, 2732.87, 3290.87)
  * "Tuned" Stochastic Maximum Threshold (v7)
-    * Score: TBD
+    * Score: 3467.63 (7436.90, 3182.48, 1741.78, 1878.54, 3098.45)
  * "Tuned" Full-Buffer Minimum Error Threshold
     * Score: TBD
 

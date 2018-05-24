@@ -227,7 +227,7 @@ class AllAverageURB(PrioritizedReplayBuffer):
     def sample(self, num_samples):
         res = []
         for _ in range(num_samples):
-            i = random.choice(len(self.transitions))
+            i = random.randrange(len(self.transitions))
             transition = self.transitions[i].copy()
             transition['weight'] = 1
             transition['id'] = i
@@ -279,7 +279,7 @@ class DecayingBufferAverageURB(PrioritizedReplayBuffer):
     def sample(self, num_samples):
         res = []
         for _ in range(num_samples):
-            i = random.choice(len(self.transitions))
+            i = random.randrange(len(self.transitions))
             transition = self.transitions[i].copy()
             transition['weight'] = 1
             transition['id'] = i

@@ -225,9 +225,15 @@ class AllAverageURB(PrioritizedReplayBuffer):
         self.error_threshold = 0 # Threshold error for newly added sample
 
     def sample(self, num_samples):
-        res = [random.choice(self.transitions).copy() for _ in range(num_samples)]
-        for transition in res:
+        res = []
+        for _ in range(num_samples):
+            i = random.choice(len(self.transitions))
+            transition = self.transitions[i].copy()
             transition['weight'] = 1
+            transition['id'] = i
+
+            res.append(transition)
+
         return res
 
     def add_sample(self, sample, init_weight=None):

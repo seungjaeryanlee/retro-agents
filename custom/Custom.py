@@ -254,3 +254,51 @@ class AllAverageURB(PrioritizedReplayBuffer):
 
         while len(self.transitions) > self.capacity:
             del self.transitions[0]
+
+
+class DecayingBufferAverageURB(PrioritizedReplayBuffer):
+    """
+    A uniform replay buffer with Decaying Buffer Average Threshold caching.
+    Uses different decaying scheme from DecayingBufferAveragePRB: decaying is
+    reset after accepting a sample.
+    """
+
+    def __init__(self, capacity, alpha, beta, first_max=1, epsilon=0):
+        super().__init__(capacity, alpha, beta, first_max, epsilon)
+
+        self.error_threshold = 0              # Threshold error for newly added sample
+        self.error_threshold_decay_rate = 0.9 # Threshold decay after rejecting sample
+        self.error_threshold_reject_count = 0
+
+    def sample(self, num_samples):
+        res = [random.choice(self.transitions).copy() for _ in range(num_samples)]
+        for transition in res:
+            transition['weight'] = 1
+        return res
+
+    def add_sample(self, sample, init_weight=None):
+        """
+        Add a sample to the buffer.
+        When new samples are added without an explicit initial weight, the
+        maximum weight argument ever seen is used. When the buffer is empty,
+        first_max is used.
+        """
+        if init_weight is None:
+            self.transitions.append(sample)
+            self.errors.append(self._process_weight(self._max_weight_arg))
+            self.error_threshold_reject_count = 0
+        else:
+            new_error = self._process_weight(init_weight)
+            if new_error < self.error_threshold * self.error_threshold_decay_rate**self.error_threshold_reject_count:
+                self.error_threshold_reject_count += 1
+                return
+
+            self.transitions.append(sample)
+            self.errors.append(new_error)
+
+            # Update error_threshold via incremental average
+            self.error_threshold += (new_error - self.error_threshold) / len(self.transitions)
+            self.error_threshold_reject_count = 0
+
+        while len(self.transitions) > self.capacity:
+            del self.transitions[0]

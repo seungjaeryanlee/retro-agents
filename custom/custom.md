@@ -28,10 +28,12 @@
     * Score: 3753.71 (7531.26, 3053.05, 2808.82, 1981.53, 3393.87)
  * "Tuned" All Exponential Average PRB (v10)
     * Score: 3772.42 (7564.60, 3105.25, 2963.96, 2133.30, 3095.01)
- * "Tuned" Undiscounted All Average PRB (v6)
+ * "Tuned" Undiscounted All Average PRB (v11)
     * Score: TBD
     * Discount: 0.99 -> 1
-  
+ * Undiscounted All Average PRB (v12)
+    * Score: TBD
+    * Discount: 0.99 -> 1
 
 
 

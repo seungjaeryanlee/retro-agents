@@ -2,8 +2,6 @@
 
 ## Scores
 
- * Baseline
-    * Score: 1358.18 (769.13, 1232.46, 2400.22, 1729.80, 659.30)
  * Tuned Baseline (v16)
     * Score: 3919.81 (7567.57, 3209.94, 3528.58, 2110.28, 3182.64)
  * "Tuned" Uniform Experience Replay (v3)
@@ -29,12 +27,31 @@
  * "Tuned" All Exponential Average PRB (v10)
     * Score: 3772.42 (7564.60, 3105.25, 2963.96, 2133.30, 3095.01)
  * "Tuned" Undiscounted All Average PRB (v11)
-    * Score: TBD
+    * Score: 3415.85 (7616.30, 2842.45, 2220.46, 2165.15, 2234.87)
     * Discount: 0.99 -> 1
+
+## Baseline Hyperparameters
+
+ * Baseline
+    * Score: 1358.18 (769.13, 1232.46, 2400.22, 1729.80, 659.30)
  * All Average PRB (v12)
+    * Score: 3755.63 (7742.97, 3481.13, 2954.60, 1366.88, 3232.59)
+ * Buffer Average PRB (v13)
+    * Score: TBD
+ * Minimum PRB (v14)
+    * Score: TBD
+ * Stochastic Maximum PRB (v15)
+    * Score: TBD
+ * All Exponential Average PRB (v16)
+    * Score: TBD
+ * Buffer Exponential Average PRB (v17)
+    * Score: TBD
+ * Combined Average PRB (v18)
+    * Score: TBD
+ * Combined Average PRB (v19)
     * Score: TBD
 
-
+## Things to Try
 
  * "Tuned" Full-Buffer Minimum Error Threshold
     * Score: TBD

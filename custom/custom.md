@@ -31,9 +31,8 @@
  * "Tuned" Undiscounted All Average PRB (v11)
     * Score: TBD
     * Discount: 0.99 -> 1
- * Undiscounted All Average PRB (v12)
+ * All Average PRB (v12)
     * Score: TBD
-    * Discount: 0.99 -> 1
 
 
 

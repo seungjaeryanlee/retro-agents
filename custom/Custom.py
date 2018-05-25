@@ -23,8 +23,10 @@ class BufferAveragePRB(PrioritizedReplayBuffer):
         first_max is used.
         """
         if init_weight is None:
+            new_error = self._process_weight(self._max_weight_arg)
+
             self.transitions.append(sample)
-            self.errors.append(self._process_weight(self._max_weight_arg))
+            self.errors.append(new_error)
         else:
             new_error = self._process_weight(init_weight)
             if new_error < self.error_threshold:
@@ -33,8 +35,8 @@ class BufferAveragePRB(PrioritizedReplayBuffer):
             self.transitions.append(sample)
             self.errors.append(new_error)
 
-            # Update error_threshold via incremental average
-            self.error_threshold += (new_error - self.error_threshold) / len(self.transitions)
+        # Update error_threshold via incremental average
+        self.error_threshold += (new_error - self.error_threshold) / len(self.transitions)
 
         while len(self.transitions) > self.capacity:
             del self.transitions[0]

@@ -7,7 +7,7 @@
  * Tuned Baseline (v16)
     * Score: 3919.81 (7567.57, 3209.94, 3528.58, 2110.28, 3182.64)
  * "Tuned" Uniform Experience Replay (v3)
-    * Score: 3848.98 (7566.88, 2977.46, 3324.90, 1993.85, 3391.80)
+    * Score: 3848.98 (7566.88, 2977.46, 3324.90, 1993.85, *3391.80)
  * "Tuned" Buffer Average PRB (v1)
     * Score: 3710.31 (7595.58, 2715.25, 2872.21, 2343.48, 3025.02)
  * "Tuned" Decaying Buffer Average PRB (v2)
@@ -27,8 +27,11 @@
  * "Tuned" Decaying Buffer Average URB (v9)
     * Score: 3753.71 (7531.26, 3053.05, 2808.82, 1981.53, 3393.87)
  * "Tuned" All Exponential Average PRB (v10)
+    * Score: 3772.42 (7564.60, 3105.25, 2963.96, 2133.30, 3095.01)
+ * "Tuned" Undiscounted All Average PRB (v6)
     * Score: TBD
-
+    * Discount: 0.99 -> 1
+  
 
 
 

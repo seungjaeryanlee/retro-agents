@@ -7,7 +7,7 @@
  * All Average PRB (v12)
     * Score: 3755.63 (7742.97, 3481.13, 2954.60, 1366.88, 3232.59)
  * Buffer Average PRB (v13)
-    * Score: TBD
+    * Score: 4236.97 (7666.15, 3745.61, 1381.75, 5005.94, 3385.39)
  * Minimum PRB (v14)
     * Score: TBD
  * Stochastic Maximum PRB (v15)

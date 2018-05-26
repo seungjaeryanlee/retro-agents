@@ -6,8 +6,8 @@ from anyrl.rollouts import PrioritizedReplayBuffer
 
 class CombinedAveragePRB(PrioritizedReplayBuffer):
     """
-    A prioritized replay buffer with All Average Threshold caching and
-    loss-proportional sampling.
+    A prioritized replay buffer with threshold of a weighted average of all
+    average and buffer average and loss-proportional sampling.
     """
 
     def __init__(self, capacity, alpha, beta, first_max=1, epsilon=0, gamma=0.5):

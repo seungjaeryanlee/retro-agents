@@ -33,7 +33,7 @@
 ## Baseline Hyperparameters
 
  * Baseline
-    * Score: TBD
+    * Score: 4470.44 (7662.17, 2827.67, 2740.57, 5782.61, 3339.20)
  * All Average PRB (v12)
     * Score: 3755.63 (7742.97, 3481.13, 2954.60, 1366.88, 3232.59)
  * Buffer Average PRB (v13)

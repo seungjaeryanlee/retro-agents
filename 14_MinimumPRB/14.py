@@ -16,7 +16,7 @@ import gym_remote.exceptions as gre
 
 from sonic_util import AllowBacktracking, make_env
 
-from Custom import MinimumPRB
+from MinimumPRB import MinimumPRB
 
 def main():
     """Run DQN until the environment throws an exception."""

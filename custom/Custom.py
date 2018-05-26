@@ -93,15 +93,15 @@ class MinimumPRB(PrioritizedReplayBuffer):
         first_max is used.
         """
         if init_weight is None:
-            self.transitions.append(sample)
-            self.errors.append(self._process_weight(self._max_weight_arg))
+            new_error = self._process_weight(self._max_weight_arg)
         else:
             new_error = self._process_weight(init_weight)
-            if new_error < self.errors.min():
-                return
 
-            self.transitions.append(sample)
-            self.errors.append(new_error)
+        if new_error < self.errors.min():
+            return
+
+        self.transitions.append(sample)
+        self.errors.append(new_error)
 
         while len(self.transitions) > self.capacity:
             del self.transitions[0]

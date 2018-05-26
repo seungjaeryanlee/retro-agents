@@ -33,40 +33,30 @@
 ## Baseline Hyperparameters
 
  * Baseline
-    * Score: 1358.18 (769.13, 1232.46, 2400.22, 1729.80, 659.30)
+    * Score: TBD
  * All Average PRB (v12)
     * Score: 3755.63 (7742.97, 3481.13, 2954.60, 1366.88, 3232.59)
  * Buffer Average PRB (v13)
     * Score: TBD
  * Minimum PRB (v14)
     * Score: TBD
- * Stochastic Maximum PRB (v15)
+ * All Exponential Average PRB (v15)
     * Score: TBD
- * All Exponential Average PRB (v16)
+ * Buffer Exponential Average PRB (v16)
     * Score: TBD
- * Buffer Exponential Average PRB (v17)
+ * Combined Average PRB (v17)
     * Score: TBD
- * Combined Average PRB (v18)
-    * Score: TBD
- * Combined Average PRB (v19)
-    * Score: TBD
+ * ??? URB (v18)
+    * Convert best PRB threshold to URB
+    * Compare URB vs. PRB vs. This
 
 ## Things to Try
 
+ * Stochastic Maximum PRB
  * "Tuned" Full-Buffer Minimum Error Threshold
-    * Score: TBD
  * "Tuned" Moving Average Error Threshold with Exponential Decay and Reset
-    * Score: TBD
-    * Learning rate: 1e-4 -> 1e-3
-    * Alpha: 0.5 -> 0.7
  * "Tuned" Weighted Moving Average Error Threshold with Exponential Decay and Reset
-    * Score: TBD
-    * Learning rate: 1e-4 -> 1e-3
-    * Alpha: 0.5 -> 0.7
  * "Tuned" Exponential Moving Average Error Threshold with Exponential Decay and Reset
-    * Score: TBD
-    * Learning rate: 1e-4 -> 1e-3
-    * Alpha: 0.5 -> 0.7
 
 ## Ideas
  * Re-tune Hyperparameters for custom agents

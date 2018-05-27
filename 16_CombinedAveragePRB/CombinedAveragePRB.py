@@ -30,9 +30,10 @@ class CombinedAveragePRB(PrioritizedReplayBuffer):
             new_error = self._process_weight(init_weight)
 
         if new_error >= self.gamma * self.buffer_average + (1 - self.gamma) *self.all_average:
-            self.buffer_average += (new_error - self.buffer_average) / len(self.transitions)
             self.transitions.append(sample)
             self.errors.append(new_error)
+
+            self.buffer_average += (new_error - self.buffer_average) / len(self.transitions)
 
         self.all_average += (new_error - self.all_average) / len(self.transitions)
 

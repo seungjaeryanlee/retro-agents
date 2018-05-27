@@ -16,14 +16,16 @@
     * Score: 4310.48 (7593.99, 2497.77, 2981.47, 5774.04, 2705.14)
  * Double Sampling PRB+URB (v17)
     * Score: TBD
- * Stochastic Average Choice PRB
- * Buffer Weighted Average PRB
+ * Buffer Exponential Average PRB (v18)
+ * Stochastic Maximum Delta PRB (v19)
+ * Minimum Error Deletion PRB (v20)
 
 ## Threshold MAYBE
 
+ * **Check Buffer Average PRBs when init_weight=None** 
+ * Stochastic Average Choice PRB
  * All Weighted Average PRB
  * All Exponential Average PRB
- * Buffer Exponential Average PRB
  * ??? URB (Convert best PRB threshold to URB for comparison)
  * Decaying Buffer Average PRB
 
@@ -31,3 +33,5 @@
 
  * Least Error Deletion with Sorted Float Buffer
  * Stochastic Deletion
+ * Stochastic Deletion with "staleness" penalty
+

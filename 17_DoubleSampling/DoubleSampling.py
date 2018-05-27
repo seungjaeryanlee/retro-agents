@@ -36,6 +36,7 @@ class DoubleSampling(PrioritizedReplayBuffer):
 
     def sample_urb(self, num_samples):
         res = [random.choice(self.transitions).copy() for _ in range(num_samples)]
-        for transition in res:
+        for i, transition in enumerate(res):
             transition['weight'] = 1
+            transition['id'] = i
         return res

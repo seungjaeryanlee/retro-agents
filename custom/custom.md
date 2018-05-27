@@ -13,9 +13,10 @@
  * Stochastic Maximum PRB (v15)
     * Score: 4472.48 (7382.44, 3739.57, 2991.12, 4902.19, 3347.11)
  * Combined Average PRB (v16)
+    * Score: 4310.48 (7593.99, 2497.77, 2981.47, 5774.04, 2705.14)
+ * Double Sampling PRB+URB (v17)
     * Score: TBD
- * Stochastic PRB + URB
-    * Double Sampling, one PRB, one URB
+ * Stochastic Average Choice PRB
  * Buffer Weighted Average PRB
 
 ## Threshold MAYBE

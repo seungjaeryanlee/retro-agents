@@ -33,7 +33,8 @@ class MinimumDeletionPRB(PrioritizedReplayBuffer):
         else:
             self.errors.append(self._process_weight(init_weight))
         while len(self.transitions) > self.capacity:
-            del self.transitions[0]
+            del self.transitions[self.errors.min_id()]
+            # TODO Should I recompute min after?
 
 
 class CustomFloatBuffer:
@@ -50,6 +51,7 @@ class CustomFloatBuffer:
             num_bins += 1
         self._bin_sums = np.zeros((num_bins,), dtype=dtype)
         self._min = 0
+        self._min_id = 0
 
     def append(self, value):
         """
@@ -91,6 +93,10 @@ class CustomFloatBuffer:
     def min(self):
         """Get the minimum value in the buffer."""
         return self._min
+    
+    def min_id(self):
+        """Get the index of minimum value in the buffer."""
+        return self._min_id
 
     def sum(self):
         """Get the sum of the values in the buffer."""
@@ -119,6 +125,8 @@ class CustomFloatBuffer:
 
     def _recompute_min(self):
         if self._used < self._capacity:
-            self._min = np.min(self._buffer[:self._used])
+            self._min_id = np.argmin(self._buffer[:self._used])
         else:
-            self._min = np.min(self._buffer)
+            self._min_id = np.argmin(self._buffer)
+
+        self._min = self._buffer[self._min_id]

@@ -19,6 +19,8 @@
  * Buffer Exponential Average PRB (v18)
  * Stochastic Maximum Delta PRB (v19)
  * Minimum Error Deletion PRB (v20)
+ * No Dueling (v21)
+ * Uniform Replay Memory (v22)
 
 ## Threshold MAYBE
 

@@ -17,6 +17,7 @@
  * Double Sampling PRB+URB (v17)
     * Score: 4068.85 (8070.37, 2683.20, 2494.67, 3991.64, 3104.40)
  * Buffer Exponential Average PRB (v18)
+    * Score: 4146.10 (7098.17, 2828.04, 1926.53, 5857.17, 3020.59)
  * Stochastic Maximum Delta PRB (v19)
  * Minimum Error Deletion PRB (v20)
  * No Dueling (v21)

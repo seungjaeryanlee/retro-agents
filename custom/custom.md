@@ -1,6 +1,6 @@
 # Custom
 
-## Threshold TODO
+## TODO
 
  * Baseline
     * Score: 4470.44 (7662.17, 2827.67, 2740.57, 5782.61, 3339.20)
@@ -19,9 +19,16 @@
  * Buffer Exponential Average PRB (v18)
     * Score: 4146.10 (7098.17, 2828.04, 1926.53, 5857.17, 3020.59)
  * Stochastic Maximum Delta PRB (v19)
+    * Score: TBD
  * Minimum Error Deletion PRB (v20)
+    * Temporarily skipping (v21 first, then v20)
  * No Dueling (v21)
+    * Score: TBD
  * Uniform Replay Memory (v22)
+ * Short Term Memory PRB (v23)
+
+ * Dual Replay Memory PRB
+ * Stochastic Deletion PRB
 
 ## Threshold MAYBE
 

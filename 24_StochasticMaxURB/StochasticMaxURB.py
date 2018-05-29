@@ -25,7 +25,7 @@ class StochasticMaxURB(PrioritizedReplayBuffer):
         Uniform sampling.
         """
         res = [random.choice(self.transitions).copy() for _ in range(num_samples)]
-        for i, transition in res.items():
+        for i, transition in enumerate(res):
             transition['weight'] = 1
             transition['id'] = i
         return res

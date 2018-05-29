@@ -19,13 +19,19 @@
  * Buffer Exponential Average PRB (v18)
     * Score: 4146.10 (7098.17, 2828.04, 1926.53, 5857.17, 3020.59)
  * Stochastic Maximum Delta PRB (v19)
-    * Score: TBD
+    * Score: 4407.80 (7655.47, 2413.89, 3521.59, 5578.21, 2869.85)
  * Minimum Error Deletion PRB (v20)
-    * Temporarily skipping (v21 first, then v20)
+    * TEMPORARILY SKIPPED
  * No Dueling (v21)
-    * Score: TBD
+    * Score: 3615.80 (7796.19, 3269.91, 1435.77, 2135.99, 3441.13)
  * Uniform Replay Memory (v22)
+    * Score: 4282.15 (7677.11, 2446.46, 3347.89, 6351.07, 1594.23)
  * Short Term Memory PRB (v23)
+    * TEMPORARILY SKIPPED
+ * Stochastic Maximum URB (v24)
+    * Score: TBD
+
+
 
  * Dual Replay Memory PRB
  * Stochastic Deletion PRB

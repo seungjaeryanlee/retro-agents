@@ -27,10 +27,11 @@
  * Uniform Replay Memory (v22)
     * Score: 4282.15 (7677.11, 2446.46, 3347.89, 6351.07, 1594.23)
  * Short Term Memory PRB (v23)
-    * Score: TBD
+    * Score: 3564.65 (7711.45, 2929.20, 2167.58, 1895.86, 3119.19)
  * Stochastic Maximum URB (v24)
     * Score: 3559.79 (7529.44, 3086.36, 2793.14, 1006.20, 3383.79)
  * Full Buffer Stochastic Maximum PRB (v25)
+    * Score: TBD
  * Stochastic Buffer Average PRB (v26)
  * Stochastic Deletion PRB $e^{-x}$ (v27)
 

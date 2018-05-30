@@ -22,7 +22,6 @@
     * Score: 4407.80 (7655.47, 2413.89, 3521.59, 5578.21, 2869.85)
  * Minimum Error Deletion PRB (v20)
     * Score: 4185.91 (7717.11, 2583.42, 1387.13, 5827.83, 3414.06)
-    * **WRONG IMPLEMENTATION**
  * No Dueling (v21)
     * Score: 3615.80 (7796.19, 3269.91, 1435.77, 2135.99, 3441.13)
  * Uniform Replay Memory (v22)

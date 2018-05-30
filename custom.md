@@ -31,8 +31,9 @@
  * Stochastic Maximum URB (v24)
     * Score: 3559.79 (7529.44, 3086.36, 2793.14, 1006.20, 3383.79)
  * Full Buffer Stochastic Maximum PRB (v25)
-    * Score: TBD
+    * Score: 3561.67 (7648.46, 2380.47, 2782.34, 1823.71, 3173.38)
  * Stochastic Buffer Average PRB (v26)
+    * Score: TBD
  * Stochastic Deletion PRB $e^{-x}$ (v27)
 
 ## Threshold MAYBE

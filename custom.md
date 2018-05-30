@@ -1,6 +1,6 @@
 # Custom
 
-## TODO
+## Implemented
 
  * Baseline
     * Score: 4470.44 (7662.17, 2827.67, 2740.57, 5782.61, 3339.20)
@@ -32,9 +32,10 @@
  * Stochastic Maximum URB (v24)
     * Score: 3559.79 (7529.44, 3086.36, 2793.14, 1006.20, 3383.79)
  * Full Buffer Stochastic Maximum PRB (v25)
+ * Stochastic Buffer Average PRB (v26)
  * Stochastic Deletion PRB
     * **NOT IMPLEMENTED YET**
- * Stochastic Buffer Average PRB
+
 
 
 

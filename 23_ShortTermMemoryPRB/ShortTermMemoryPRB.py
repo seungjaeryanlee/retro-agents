@@ -14,10 +14,10 @@ class ShortTermMemoryPRB(PrioritizedReplayBuffer):
     def __init__(self, capacity, alpha, beta, first_max=1, epsilon=0,
                  short_capacity=None, short_sample_rate=0.5):
         super().__init__(capacity, alpha, beta, first_max, epsilon)
-        self.short_transitions = []
-        self.short_errors = FloatBuffer(short_capacity)
         self.short_capacity = short_capacity if short_capacity else 4500 # timestep limit per episode
         self.short_sample_rate = short_sample_rate
+        self.short_transitions = []
+        self.short_errors = FloatBuffer(self.short_capacity)
 
     def sample(self, num_samples):
         if np.random.random() < self.short_sample_rate:

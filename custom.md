@@ -33,11 +33,7 @@
     * Score: 3559.79 (7529.44, 3086.36, 2793.14, 1006.20, 3383.79)
  * Full Buffer Stochastic Maximum PRB (v25)
  * Stochastic Buffer Average PRB (v26)
- * Stochastic Deletion PRB
-    * **NOT IMPLEMENTED YET**
-
-
-
+ * Stochastic Deletion PRB $e^{-x}$ (v27)
 
 ## Threshold MAYBE
 
@@ -53,11 +49,11 @@
 
  * Uniform Deletion
  * Least Error Deletion with Sorted Float Buffer
- * Stochastic Deletion (Softmax?)
  * Stochastic Deletion with "staleness" penalty
-
+  * Stochastic Deletion PRB $1/x$
 
 ## Other Ideas
+ * Optimize FloatBuffer numpy use
  * Cyclic NoisyNet
  * Use different Replay Memory throughout training
     * Call dqn.train multiple times

@@ -22,32 +22,54 @@
     * Score: 4407.80 (7655.47, 2413.89, 3521.59, 5578.21, 2869.85)
  * Minimum Error Deletion PRB (v20)
     * Score: 4185.91 (7717.11, 2583.42, 1387.13, 5827.83, 3414.06)
+    * **WRONG IMPLEMENTATION**
  * No Dueling (v21)
     * Score: 3615.80 (7796.19, 3269.91, 1435.77, 2135.99, 3441.13)
  * Uniform Replay Memory (v22)
     * Score: 4282.15 (7677.11, 2446.46, 3347.89, 6351.07, 1594.23)
  * Short Term Memory PRB (v23)
-    * TEMPORARILY SKIPPED
+    * Score: TBD
  * Stochastic Maximum URB (v24)
     * Score: 3559.79 (7529.44, 3086.36, 2793.14, 1006.20, 3383.79)
-
-
-
- * Dual Replay Memory PRB
+ * Full Buffer Stochastic Maximum PRB (v25)
  * Stochastic Deletion PRB
+    * **NOT IMPLEMENTED YET**
+ * Stochastic Buffer Average PRB
+
+
 
 ## Threshold MAYBE
 
- * **Check Buffer Average PRBs when init_weight=None** 
- * Stochastic Average Choice PRB
- * All Weighted Average PRB
+ * **Check Buffer Average PRBs when init_weight=None**
  * All Exponential Average PRB
  * ??? URB (Convert best PRB threshold to URB for comparison)
  * Decaying Buffer Average PRB
+ * Not Updated Max PRB
+ * Different Stochastic Max PRB? (Softmax)
+
 
 ## Deletion
 
+ * Uniform Deletion
  * Least Error Deletion with Sorted Float Buffer
- * Stochastic Deletion
+ * Stochastic Deletion (Softmax?)
  * Stochastic Deletion with "staleness" penalty
+
+
+## Other Ideas
+ * Cyclic NoisyNet
+ * Use different Replay Memory throughout training
+    * Call dqn.train multiple times
+    * Low lr high epsilon / high lr low epsilon repeat
+ * Subtract time from reward in early training phase to waste less time
+ * Double Sampling on different types of PRB (different TDerror)
+ * Recalculate error periodically
+ * Dual Replay Memory PRB
+ * "Similarity-to-current" Priority
+ * Unified Buffer for Long and short term
+ * Double Filter Sampling (URB then PRB)
+ * Increase Beta over time
+ * Softmax PRB
+ * Prioritized Replay + Recent Memory
+ * Different replay mem for each operation: Collect Sample Delete
 

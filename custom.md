@@ -37,7 +37,8 @@
  * Stochastic Deletion PRB $e^{-x}$ (v27)
     * Score: 4296.69 (7426.93, 2711.12, 3251.27, 4646.53, 3447.60)
  * Learning Rate Decay (v28)
-
+ * Stochastic Deletion with "staleness" penalty
+ * No Min Buffer
 
 ## Threshold MAYBE
 
@@ -53,8 +54,7 @@
 
  * Uniform Deletion
  * Least Error Deletion with Sorted Float Buffer
- * Stochastic Deletion with "staleness" penalty
-  * Stochastic Deletion PRB $1/x$
+ * Stochastic Deletion PRB $1/x$
 
 ## Other Ideas
  * Optimize FloatBuffer numpy use

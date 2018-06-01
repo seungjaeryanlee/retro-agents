@@ -41,7 +41,7 @@
  * No Min Buffer (v29)
     * Score: 4108.97 (7693.96, 3126.24, 2260.07, 4282.86, 3183.73)
  * Weight Change Deletion PRB (v30)
-
+    * Score: 3922.14 (7737.36, 2371.42, 2413.91, 3780.39, 3307.63)
  * Stochastic Deletion with "staleness" penalty
 
 ## Threshold MAYBE

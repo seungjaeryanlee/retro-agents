@@ -17,6 +17,12 @@ import gym_remote.exceptions as gre
 
 from sonic_util import AllowBacktracking, make_env
 
+
+def get_optimize_operation(sess, dqn, learning_rate=6.25e-5, epsilon=1.5e-4, **adam_kwargs):
+    optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate, epsilon=epsilon, **adam_kwargs)
+    sess.run(tf.variables_initializer(optimizer.variables()))
+    return optimizer.minimize(dqn.loss)
+
 def main():
     """Run DQN until the environment throws an exception."""
     env = AllowBacktracking(make_env(stack=False, scale_rew=False))
@@ -36,8 +42,7 @@ def main():
 
         # Crude implementation of Learning Rate Decay
         for i in range(1, 10):
-            optimize = dqn.optimize(learning_rate=1e-3 / i)
-            sess.run(tf.variables_initializer(optimize.variables()))
+            optimize = get_optimize_operation(sess, dqn, learning_rate=1e-3 / i)
             dqn.train(num_steps=100000,
                       player=player,
                       replay_buffer=replay,
@@ -47,8 +52,7 @@ def main():
                       batch_size=32,
                       min_buffer_size=20000)
 
-        optimize = dqn.optimize(learning_rate=1e-4)
-        sess.run(tf.variables_initializer(optimize.variables()))
+        optimize = get_optimize_operation(sess, dqn, learning_rate=1e-4)
         dqn.train(num_steps=1000000,
                 player=player,
                 replay_buffer=replay,

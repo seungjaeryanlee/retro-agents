@@ -37,6 +37,7 @@ def main():
         # Crude implementation of Learning Rate Decay
         for i in range(1, 10):
             optimize = dqn.optimize(learning_rate=1e-3 / i)
+            sess.run(tf.variables_initializer(optimize.variables()))
             dqn.train(num_steps=100000,
                       player=player,
                       replay_buffer=replay,
@@ -47,6 +48,7 @@ def main():
                       min_buffer_size=20000)
 
         optimize = dqn.optimize(learning_rate=1e-4)
+        sess.run(tf.variables_initializer(optimize.variables()))
         dqn.train(num_steps=1000000,
                 player=player,
                 replay_buffer=replay,

@@ -37,8 +37,11 @@
  * Stochastic Deletion PRB $e^{-x}$ (v27)
     * Score: 4296.69 (7426.93, 2711.12, 3251.27, 4646.53, 3447.60)
  * Learning Rate Decay (v28)
- * No Min Buffer (v29)
     * Score: TBD
+ * No Min Buffer (v29)
+    * Score: 4108.97 (7693.96, 3126.24, 2260.07, 4282.86, 3183.73)
+ * Weight Change Deletion PRB (v30)
+
  * Stochastic Deletion with "staleness" penalty
 
 ## Threshold MAYBE

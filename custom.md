@@ -33,11 +33,12 @@
  * Full Buffer Stochastic Maximum PRB (v25)
     * Score: 3561.67 (7648.46, 2380.47, 2782.34, 1823.71, 3173.38)
  * Stochastic Buffer Average PRB (v26)
-    * Score: TBD
+    * Score: 3988.35 (7563.53, 2660.62, 2359.74, 4126.60, 3231.24)
  * Stochastic Deletion PRB $e^{-x}$ (v27)
     * Score: 4296.69 (7426.93, 2711.12, 3251.27, 4646.53, 3447.60)
  * Learning Rate Decay (v28)
  * No Min Buffer (v29)
+    * Score: TBD
  * Stochastic Deletion with "staleness" penalty
 
 ## Threshold MAYBE

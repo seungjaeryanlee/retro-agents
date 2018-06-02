@@ -45,6 +45,7 @@
  * Weight Change Deletion PRB (v30)
     * Score: 3922.14 (7737.36, 2371.42, 2413.91, 3780.39, 3307.63)
  * Stochastic Maximum + Stochastic Deletion $e^{-x}$ PRB (v31)
+ * Delta Deletion PRB (v32)
 
 
 

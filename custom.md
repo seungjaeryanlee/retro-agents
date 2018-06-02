@@ -3,7 +3,8 @@
 ## Implemented
 
  * Baseline
-    * Score: 4470.44 (7662.17, 2827.67, 2740.57, 5782.61, 3339.20)
+    * Score: 4470.44 (7662.17, 2827.67, 2740.57, 5782.61, 3339.20)q
+    * Score: TBD
  * All Average PRB (v12)
     * Score: 3755.63 (7742.97, 3481.13, 2954.60, 1366.88, 3232.59)
  * Buffer Average PRB (v13)
@@ -12,6 +13,7 @@
     * Score: 3833.00 (7706.23, 2569.26, 3069.25, 2513.12, 3307.15)
  * Stochastic Maximum PRB (v15)
     * Score: 4472.48 (7382.44, 3739.57, 2991.12, 4902.19, 3347.11)
+    * Score: 3754.35 (7447.32, 4030.97, 2681.76, 1907.79, 2703.91)
  * Combined Average PRB (v16)
     * Score: 4310.48 (7593.99, 2497.77, 2981.47, 5774.04, 2705.14)
  * Double Sampling PRB+URB (v17)
@@ -42,6 +44,8 @@
     * Score: 4108.97 (7693.96, 3126.24, 2260.07, 4282.86, 3183.73)
  * Weight Change Deletion PRB (v30)
     * Score: 3922.14 (7737.36, 2371.42, 2413.91, 3780.39, 3307.63)
+ * Stochastic Maximum + Stochastic Deletion $e^{-x}$ PRB (v31)
+ * Delta Deletion PRB (v32)
  * Stochastic Deletion with "staleness" penalty
 
 ## Threshold MAYBE

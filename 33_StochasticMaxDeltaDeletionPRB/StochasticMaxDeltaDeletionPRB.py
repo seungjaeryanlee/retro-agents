@@ -33,7 +33,7 @@ class StochasticMaxDeltaDeletionPRB(PrioritizedReplayBuffer):
         else:
             new_error = self._process_weight(init_weight)
 
-        if random.random() < new_error / self.errors.max():
+        if self.errors.max() == 0 or random.random() < new_error / self.errors.max():
             self.transitions.append(sample)
             self.errors.append(new_error)
 

@@ -5,7 +5,7 @@ from math import sqrt
 from anyrl.rollouts import PrioritizedReplayBuffer
 
 
-class WeightChangeDeletionPRB(PrioritizedReplayBuffer):
+class DeltaDeletionPRB(PrioritizedReplayBuffer):
     """
     A prioritized replay buffer with minimum error deletion and
     loss-proportional sampling.

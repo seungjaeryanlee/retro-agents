@@ -52,6 +52,8 @@
     * Score: 3049.33 (7671.23, 2258.83, 1798.78, 2480.09, 1037.72)
  * Delta Deletion PRB (v34)
     * Score: TBD
+ * Stochastic Delta Deletion PRB (v35)
+    * Score: TBD
 
  * Stochastic Deletion with "staleness" penalty
 

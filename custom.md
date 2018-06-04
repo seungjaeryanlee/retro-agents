@@ -38,14 +38,21 @@
     * Score: 3988.35 (7563.53, 2660.62, 2359.74, 4126.60, 3231.24)
  * Stochastic Deletion PRB $e^{-x}$ (v27)
     * Score: 4296.69 (7426.93, 2711.12, 3251.27, 4646.53, 3447.60)
- * Learning Rate Decay (v28)
-    * Score: TBD
  * No Min Buffer (v29)
     * Score: 4108.97 (7693.96, 3126.24, 2260.07, 4282.86, 3183.73)
  * Weight Change Deletion PRB (v30)
     * Score: 3922.14 (7737.36, 2371.42, 2413.91, 3780.39, 3307.63)
  * Stochastic Maximum + Stochastic Deletion $e^{-x}$ PRB (v31)
+    * Score: 3857.06 (7460.97, 3860.93, 2175.60, 2426.37, 3361.43)
  * Delta Deletion PRB (v32)
+    * **WRONG IMPLEMENTATION**
+    * Score: 3836.09 (7542.11, 2994.56, 2202.19, 3156.57, 3285.01)
+ * Stochastic Maximum Delta Deletion PRB (v33)
+    * **WRONG IMPLEMENTATION**
+    * Score: 3049.33 (7671.23, 2258.83, 1798.78, 2480.09, 1037.72)
+ * Delta Deletion PRB (v34)
+    * Score: TBD
+
  * Stochastic Deletion with "staleness" penalty
 
 ## Threshold MAYBE

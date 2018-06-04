@@ -42,7 +42,7 @@ class StochasticDeltaDeletionPRB(PrioritizedReplayBuffer):
         Move transition, error and delta to front by switching places with first
         element. Done before deletion.
         """
-        transition_idx = (error_idx - self._start) % self._capacity
+        transition_idx = (error_idx - self.errors._start) % self.errors._capacity
 
         if transition_idx == 0:
             return

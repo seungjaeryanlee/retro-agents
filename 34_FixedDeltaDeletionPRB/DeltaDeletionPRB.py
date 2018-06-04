@@ -37,28 +37,30 @@ class DeltaDeletionPRB(PrioritizedReplayBuffer):
             self.move_to_front(self.errors.min_delta_id())
             del self.transitions[0]
 
-    def move_to_front(self, idx):
+    def move_to_front(self, error_idx):
         """
         Move transition, error and delta to front by switching places with first
         element. Done before deletion.
         """
-        if self.errors.min_delta_id() == 0:
+        transition_idx = (error_idx - self._start) % self._capacity
+
+        if transition_idx == 0:
             return
 
         # Switch transition
         temp = self.transitions[0]
-        self.transitions[0] = self.transitions[self.errors.min_delta_id()]
-        self.transitions[self.errors.min_delta_id()] = temp
+        self.transitions[0] = self.transitions[transition_idx]
+        self.transitions[transition_idx] = temp
 
         # Switch errors
         temp = self.errors._buffer[self.errors._start]
-        self.errors._buffer[self.errors._start] = self.errors._buffer[self.errors.min_delta_id()]
-        self.errors._buffer[self.errors.min_delta_id()] = temp
+        self.errors._buffer[self.errors._start] = self.errors._buffer[error_idx]
+        self.errors._buffer[error_idx] = temp
 
         # Switch deltas
         temp = self.errors._delta_buffer[self.errors._start]
-        self.errors._delta_buffer[self.errors._start] = self.errors._delta_buffer[self.errors.min_delta_id()]
-        self.errors._delta_buffer[self.errors.min_delta_id()] = temp
+        self.errors._delta_buffer[self.errors._start] = self.errors._delta_buffer[error_idx]
+        self.errors._delta_buffer[error_idx] = temp
 
 class CustomFloatBuffer(FloatBuffer):
     """A ring-buffer of floating point values."""

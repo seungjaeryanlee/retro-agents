@@ -54,6 +54,13 @@
     * Score: TBD
  * Stochastic Delta Deletion PRB (v35)
     * Score: TBD
+ * Sigmoid Stochastic Delta Deletion PRB (v36)
+    * Score: TBD
+ * Stochastic Max Sigmoid Stochastic Delta Deletion PRB
+    * Score: TBD
+ * Stochastic Max Stochastic Delta Deletion PRB
+    * Score: TBD
+
 
  * Stochastic Deletion with "staleness" penalty
 

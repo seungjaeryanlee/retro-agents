@@ -11,7 +11,7 @@ class SigmoidStochasticDeltaDeletionPRB(PrioritizedReplayBuffer):
     loss-proportional sampling.
     """
 
-    def __init__(self, capacity, alpha, beta, first_max=1, epsilon=0):
+    def __init__(self, capacity, alpha, beta, first_max=1, epsilon=0, sigmoid_min=40000):
         self.capacity = capacity
         self.alpha = alpha
         self.beta = beta
@@ -19,6 +19,8 @@ class SigmoidStochasticDeltaDeletionPRB(PrioritizedReplayBuffer):
         self.transitions = []
         self.errors = CustomFloatBuffer(capacity)
         self._max_weight_arg = first_max
+
+        self.sigmoid_min = sigmoid_min
 
     def add_sample(self, sample, init_weight=None):
         """
@@ -73,6 +75,8 @@ class SigmoidStochasticDeltaDeletionPRB(PrioritizedReplayBuffer):
         # Delete chosen samples
         print('Deleting ', len(samples_to_delete))
         for sample in samples_to_delete:
+            if self.errors._used < self.sigmoid_min:
+                break
             error_idx = (sample['id'] + self.errors._start) % self.errors._capacity
             self.move_to_front(error_idx)
             del self.transitions[0]

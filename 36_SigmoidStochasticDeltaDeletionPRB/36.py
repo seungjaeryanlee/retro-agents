@@ -35,7 +35,7 @@ def main():
         sess.run(tf.global_variables_initializer())
         dqn.train(num_steps=2000000, # Make sure an exception arrives before we stop.
                   player=player,
-                  replay_buffer=SigmoidStochasticDeltaDeletionPRB(500000, 0.5, 0.4, epsilon=0.1),
+                  replay_buffer=SigmoidStochasticDeltaDeletionPRB(500000, 0.5, 0.4, epsilon=0.1, sigmoid_min=40000),
                   optimize_op=optimize,
                   train_interval=1,
                   target_interval=8192,

@@ -9,7 +9,7 @@ def run_jerk(env, replay_buffer, n_steps):
     new_ep = True
     solutions = []
     steps = 0
-    while steps < n_steps:
+    while True:
         if new_ep:
             if (solutions and random.random() < EXPLOIT_BIAS + env.total_steps_ever / TOTAL_TIMESTEPS):
                 solutions = sorted(solutions, key=lambda x: np.mean(x[0]))
@@ -22,11 +22,18 @@ def run_jerk(env, replay_buffer, n_steps):
                 new_ep = False
         rew, new_ep = move(env, replay_buffer, 100)
         steps += 100
+
+        if new_ep and steps >= n_steps:
+            break
+
         if not new_ep and rew <= 0:
             _, new_ep = move(env, replay_buffer, 70, left=True)
             steps += 70
         if new_ep:
             solutions.append(([max(env.reward_history)], env.best_sequence()))
+
+        if new_ep and steps >= n_steps:
+            break
 
 def move(env, replay_buffer, num_steps, left=False, jump_prob=1.0 / 10.0, jump_repeat=4):
     """

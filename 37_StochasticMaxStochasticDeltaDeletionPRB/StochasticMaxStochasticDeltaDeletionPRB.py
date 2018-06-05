@@ -113,9 +113,9 @@ class CustomFloatBuffer(FloatBuffer):
         in append() but is called in set_value(), which is only called in
         _update_weights() in PRB.
         """
+        self._delta_buffer[idx] = value - self._buffer[idx]
         self._set_idx(idx, value)
 
-        self._delta_buffer[idx] = value - self._buffer[idx]
 
     def min_delta_id_sample(self):
         """

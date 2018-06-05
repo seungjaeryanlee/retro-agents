@@ -1,5 +1,6 @@
 import random
 import numpy as np
+import gym
 
 EXPLOIT_BIAS = 0.25
 TOTAL_TIMESTEPS = int(1e6)

@@ -76,6 +76,7 @@ class SigmoidStochasticDeltaDeletionPRB(PrioritizedReplayBuffer):
             error_idx = (sample['id'] + self.errors._start) % self.errors._capacity
             self.move_to_front(error_idx)
             del self.transitions[0]
+            self.errors._used -= 1
 
 class CustomFloatBuffer(FloatBuffer):
     """A ring-buffer of floating point values."""
@@ -98,12 +99,13 @@ class CustomFloatBuffer(FloatBuffer):
         in append() but is called in set_value(), which is only called in
         _update_weights() in PRB.
         """
-        super()._set_idx(idx, value)
-
         self._delta_buffer[idx] = value - self._buffer[idx]
         sigmoid_prob = 1 / (1 + np.exp(-1 * self._delta_buffer[idx]))
         print('Delta: ', self._delta_buffer[idx])
         print('Sigmoid: ', sigmoid_prob)
+
+        super()._set_idx(idx, value)
+
         return np.random.random() < sigmoid_prob # Probability of deleting
 
     def min_delta_id_sample(self):

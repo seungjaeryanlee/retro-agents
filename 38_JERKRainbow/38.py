@@ -4,6 +4,7 @@
 Train an agent on Sonic using an open source Rainbow DQN
 implementation.
 """
+import logging
 
 import time
 import tensorflow as tf
@@ -34,7 +35,7 @@ def main():
     # Populate Replay buffer with JERK
     replay_buffer = PrioritizedReplayBuffer(500000, 0.5, 0.4, epsilon=0.1)
     run_jerk(jerk_env, replay_buffer, 20000)
-    print('Replay Buffer Size: ', replay_buffer.size())
+    print('Replay Buffer Size: ', replay_buffer.size)
 
     with tf.Session(config=config) as sess:
         dqn = DQN(*rainbow_models(sess,
@@ -276,3 +277,4 @@ if __name__ == '__main__':
     # except gre.GymRemoteError as exc:
     except Exception as exc:
         print('exception', exc)
+        logging.exception("Something awful happened!")

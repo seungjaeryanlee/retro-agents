@@ -114,6 +114,7 @@ class CustomFloatBuffer(FloatBuffer):
         _update_weights() in PRB.
         """
         self._delta_buffer[idx] = value - self._buffer[idx]
+        print('Updated Delta Buffer: ', self._delta_buffer[idx])
         self._set_idx(idx, value)
 
 

@@ -39,7 +39,7 @@ def main():
                   optimize_op=optimize,
                   train_interval=1,
                   target_interval=8192,
-                  batch_size=64,
+                  batch_size=32,
                   min_buffer_size=20000)
 
 if __name__ == '__main__':

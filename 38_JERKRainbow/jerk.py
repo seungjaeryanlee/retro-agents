@@ -18,7 +18,7 @@ def run_jerk(env, replay_buffer, n_steps):
                 best_pair[0].append(new_rew)
                 continue
             else:
-                env.reset()
+                env.reset_start()
                 new_ep = False
         rew, new_ep = move(env, replay_buffer, 100)
         steps += 100
@@ -55,7 +55,7 @@ def move(env, replay_buffer, num_steps, left=False, jump_prob=1.0 / 10.0, jump_r
             if random.random() < jump_prob:
                 jumping_steps_left = jump_repeat - 1
                 action[0] = True
-        obs, rew, done, _ = env.step(action)
+        obs, rew, done, _ = env.step_start([action] * 4)
         total_rew += rew
         
         # TODO: Add left B, right B to Discretizer?
@@ -96,7 +96,7 @@ def exploit(env, replay_buffer, sequence):
 
     Returns the final cumulative reward.
     """
-    env.reset()
+    env.reset_start()
     done = False
     idx = 0
     while not done:
@@ -105,7 +105,7 @@ def exploit(env, replay_buffer, sequence):
         else:
             action = sequence[idx]
 
-        obs, rew, done, _ = env.step(action)
+        obs, rew, done, _ = env.step_start([action] * 4) # HACK need to create subbatch of size 4
         idx += 1
 
         # TODO: Add left B, right B to Discretizer?
@@ -135,40 +135,40 @@ def exploit(env, replay_buffer, sequence):
         })
     return env.total_reward
 
-class TrackedEnv(gym.Wrapper):
-    """
-    An environment that tracks the current trajectory and
-    the total number of timesteps ever taken.
-    """
-    def __init__(self, env):
-        super(TrackedEnv, self).__init__(env)
-        self.action_history = []
-        self.reward_history = []
-        self.total_reward = 0
-        self.total_steps_ever = 0
+# class TrackedEnv(gym.Wrapper):
+#     """
+#     An environment that tracks the current trajectory and
+#     the total number of timesteps ever taken.
+#     """
+#     def __init__(self, env):
+#         super(TrackedEnv, self).__init__(env)
+#         self.action_history = []
+#         self.reward_history = []
+#         self.total_reward = 0
+#         self.total_steps_ever = 0
 
-    def best_sequence(self):
-        """
-        Get the prefix of the trajectory with the best
-        cumulative reward.
-        """
-        max_cumulative = max(self.reward_history)
-        for i, rew in enumerate(self.reward_history):
-            if rew == max_cumulative:
-                return self.action_history[:i+1]
-        raise RuntimeError('unreachable')
+#     def best_sequence(self):
+#         """
+#         Get the prefix of the trajectory with the best
+#         cumulative reward.
+#         """
+#         max_cumulative = max(self.reward_history)
+#         for i, rew in enumerate(self.reward_history):
+#             if rew == max_cumulative:
+#                 return self.action_history[:i+1]
+#         raise RuntimeError('unreachable')
 
-    # pylint: disable=E0202
-    def reset(self, **kwargs):
-        self.action_history = []
-        self.reward_history = []
-        self.total_reward = 0
-        return self.env.reset(**kwargs)
+#     # pylint: disable=E0202
+#     def reset(self, **kwargs):
+#         self.action_history = []
+#         self.reward_history = []
+#         self.total_reward = 0
+#         return self.env.reset(**kwargs)
 
-    def step(self, action):
-        self.total_steps_ever += 1
-        self.action_history.append(action.copy())
-        obs, rew, done, info = self.env.step(action)
-        self.total_reward += rew
-        self.reward_history.append(self.total_reward)
-        return obs, rew, done, info
+#     def step(self, action):
+#         self.total_steps_ever += 1
+#         self.action_history.append(action.copy())
+#         obs, rew, done, info = self.env.step(action)
+#         self.total_reward += rew
+#         self.reward_history.append(self.total_reward)
+#         return obs, rew, done, info

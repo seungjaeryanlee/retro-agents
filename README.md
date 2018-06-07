@@ -23,7 +23,7 @@ For a more detailed discussion of ideas used, please check the [writeup]().
 
 ### Tested Ideas
 
-These are ideas that have been implemented and tested. You can read the results [here]().
+These are ideas that have been implemented and tested. You can read the results [here](/results/RESULTS.md).
 
 #### Sampling
 

@@ -2,7 +2,7 @@
 
 1. [Retro Contest](https://contest.openai.com/)
 2. Retro Contest Writeup: In Progress
-3. Retro Contest Retrospective Blog Post: In Progress
+3. [Retro Contest Retrospective Blog Post](https://www.endtoend.ai/blog/i-learned-dqns-with-openai-competition)
 
 
 
@@ -49,7 +49,7 @@ These are ideas that have been implemented and tested. You can read the results 
 
 #### Miscellaneous
 
- * Rainbow DQN with Dueling
+ * Rainbow DQN without Dueling
  * Double Replay Memory: 1 Short Term (Episodic) Replay Memory, 1 Long Term (Lasting) Replay Memory
  * No Minimum Buffer Size
 

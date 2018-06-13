@@ -1,7 +1,7 @@
 # retro-agents
 
 1. [Retro Contest](https://contest.openai.com/)
-2. Retro Contest Writeup: In Progress
+2. [Retro Contest Writeup](/results/writeup/iclr2018_conference.pdf)
 3. [Retro Contest Retrospective Blog Post](https://www.endtoend.ai/blog/i-learned-dqns-with-openai-competition)
 
 
@@ -18,7 +18,7 @@ Below is a video of my agent on a custom stage that finished training. You can s
 
 ## Ideas
 
-For a more detailed discussion of ideas used, please check the [writeup]().
+For a more detailed discussion of ideas used, please check the [writeup](/results/writeup/iclr2018_conference.pdf).
 
 
 ### Tested Ideas

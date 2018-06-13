@@ -1,0 +1,64 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bellemare et~al.(2017)Bellemare, Dabney, and Munos]{DistributionalDQN}
+Marc~G. Bellemare, Will Dabney, and R{\'{e}}mi Munos.
+\newblock A distributional perspective on reinforcement learning.
+\newblock \emph{CoRR}, abs/1707.06887, 2017.
+\newblock URL \url{http://arxiv.org/abs/1707.06887}.
+
+\bibitem[Fortunato et~al.(2017)Fortunato, Azar, Piot, Menick, Osband, Graves,
+  Mnih, Munos, Hassabis, Pietquin, Blundell, and Legg]{NoisyNetDQN}
+Meire Fortunato, Mohammad~Gheshlaghi Azar, Bilal Piot, Jacob Menick, Ian
+  Osband, Alex Graves, Vlad Mnih, R{\'{e}}mi Munos, Demis Hassabis, Olivier
+  Pietquin, Charles Blundell, and Shane Legg.
+\newblock Noisy networks for exploration.
+\newblock \emph{CoRR}, abs/1706.10295, 2017.
+\newblock URL \url{http://arxiv.org/abs/1706.10295}.
+
+\bibitem[Hessel et~al.(2017)Hessel, Modayil, van Hasselt, Schaul, Ostrovski,
+  Dabney, Horgan, Piot, Azar, and Silver]{Rainbow}
+Matteo Hessel, Joseph Modayil, Hado van Hasselt, Tom Schaul, Georg Ostrovski,
+  Will Dabney, Daniel Horgan, Bilal Piot, Mohammad~Gheshlaghi Azar, and David
+  Silver.
+\newblock Rainbow: Combining improvements in deep reinforcement learning.
+\newblock \emph{CoRR}, abs/1710.02298, 2017.
+\newblock URL \url{http://arxiv.org/abs/1710.02298}.
+
+\bibitem[Mnih et~al.(2013)Mnih, Kavukcuoglu, Silver, Graves, Antonoglou,
+  Wierstra, and Riedmiller]{DQN}
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis
+  Antonoglou, Daan Wierstra, and Martin~A. Riedmiller.
+\newblock Playing atari with deep reinforcement learning.
+\newblock \emph{CoRR}, abs/1312.5602, 2013.
+\newblock URL \url{http://arxiv.org/abs/1312.5602}.
+
+\bibitem[Nichol et~al.(2018)Nichol, Pfau, Hesse, Klimov, and Schulman]{Retro}
+Alex Nichol, Vicki Pfau, Christopher Hesse, Oleg Klimov, and John Schulman.
+\newblock Gotta learn fast: {A} new benchmark for generalization in {RL}.
+\newblock \emph{CoRR}, abs/1804.03720, 2018.
+\newblock URL \url{http://arxiv.org/abs/1804.03720}.
+
+\bibitem[Schaul et~al.(2015)Schaul, Quan, Antonoglou, and Silver]{PER}
+Tom Schaul, John Quan, Ioannis Antonoglou, and David Silver.
+\newblock Prioritized experience replay.
+\newblock \emph{CoRR}, abs/1511.05952, 2015.
+\newblock URL \url{http://arxiv.org/abs/1511.05952}.
+
+\bibitem[van Hasselt et~al.(2015)van Hasselt, Guez, and Silver]{Double}
+Hado van Hasselt, Arthur Guez, and David Silver.
+\newblock Deep reinforcement learning with double q-learning.
+\newblock \emph{CoRR}, abs/1509.06461, 2015.
+\newblock URL \url{http://arxiv.org/abs/1509.06461}.
+
+\bibitem[Wang et~al.(2015)Wang, de~Freitas, and Lanctot]{DuelingDQN}
+Ziyu Wang, Nando de~Freitas, and Marc Lanctot.
+\newblock Dueling network architectures for deep reinforcement learning.
+\newblock \emph{CoRR}, abs/1511.06581, 2015.
+\newblock URL \url{http://arxiv.org/abs/1511.06581}.
+
+\end{thebibliography}
